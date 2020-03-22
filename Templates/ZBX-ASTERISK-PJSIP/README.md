@@ -15,16 +15,16 @@ on FreePBX server:
 - yum install zabbix40-agent.x86_64  jq.x86_64
 
 - /etc/zabbix_agentd.conf : edit 
-  - Server=<ip of zabbix server>
-  - ServerActive=<ip of zabbix server>
-  - Hostname=<hostname of asterisk>
+  - Server=ip of zabbix server
+  - ServerActive=ip of zabbix server
+  - Hostname=hostname of asterisk
   - AllowRoot=1
   - Include=/etc/zabbix/ZBX-ASTERISK-PJSIP/userparameters/asterisk_pjsip.userparameter.conf
 
 - cat /etc/sudoers.d/zabbix
-Defaults:zabbix !requiretty
+`Defaults:zabbix !requiretty
 
-zabbix ALL=(ALL:ALL)  NOPASSWD: /usr/sbin/asterisk, /usr/sbin/iptables, /usr/bin/ps, /usr/bin/sudo, /usr/bin/bash
+zabbix ALL=(ALL:ALL)  NOPASSWD: /usr/sbin/asterisk, /usr/sbin/iptables, /usr/bin/ps, /usr/bin/sudo, /usr/bin/bash`
 
 - visudo -sc
 
