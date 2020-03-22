@@ -22,9 +22,12 @@ on FreePBX server:
   - Include=/etc/zabbix/ZBX-ASTERISK-PJSIP/userparameters/asterisk_pjsip.userparameter.conf
 
 - cat /etc/sudoers.d/zabbix
-`Defaults:zabbix !requiretty
+```
+Defaults:zabbix !requiretty
 
-zabbix ALL=(ALL:ALL)  NOPASSWD: /usr/sbin/asterisk, /usr/sbin/iptables, /usr/bin/ps, /usr/bin/sudo, /usr/bin/bash`
+zabbix ALL=(ALL:ALL)  NOPASSWD: /usr/sbin/asterisk, /usr/sbin/iptables, /usr/bin/ps, /usr/bin/sudo, /usr/bin/bash
+```
+
 
 - visudo -sc
 
